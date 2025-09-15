@@ -1,0 +1,227 @@
+.body-bg {
+    background-color: cornsilk;
+    margin: 0px;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 0;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* ---- INTRO ---- */
+.intro-table-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+}
+
+.intro-table {
+    width: 100%;
+    max-width: 1000px;
+    border-spacing: 20px;
+    table-layout: fixed;
+}
+
+.intro-table td:first-child {
+    width: 60%;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.intro-table td:last-child {
+    width: 40%;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.intro-heading {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.intro-table p {
+    text-align: center;
+}
+
+/* ---- PROFILE IMG ---- */
+.profile-img {
+    width: 180px;
+    max-width: 100%;
+    border: 8px solid rgb(125, 166, 210); /* thinner */
+    border-radius: 50%;
+    box-shadow: 0px 0.5px 20px rgb(0, 0, 0);
+    display: block;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.profile-img:hover {
+    transform: scale(1.02);
+}
+
+/* ---- SECTIONS (cards) ---- */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    padding: 10px;
+    margin: 20px;
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+    border-radius: 30px;
+    background-color: rgb(119, 165, 215); 
+    color: cornsilk;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0px 6px 18px rgba(0, 0, 0, 0.35);
+    transform: translateY(-5px);
+}
+
+
+
+.card h1, .card h2 {
+    text-align: center;
+}
+
+/* ---- SKILLS ---- */
+.skills-heading {
+    color: rgb(125, 166, 210);
+    font-size: 250%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 40px;
+}
+.skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    margin: 20px auto;
+    gap: 20px;
+    justify-content: center;
+    max-width: 1200px;
+}
+
+.skills-container .card {
+    flex: 1 1 300px;   /* grow/shrink evenly, min width 300px */
+    max-width: 600px; /* keeps them equal looking */
+}
+
+
+.skills-section-heading {
+    text-align: center;
+}
+
+/* ---- FOOTER ---- */
+.footer {
+    background-color: rgb(125, 166, 210);
+    color: #fff8dc;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-icons {
+    display: flex;
+    justify-content: center;  /* centers icons horizontally */
+    align-items: center;      /* aligns vertically */
+    gap: 20px;                /* space between icons */
+    margin-top: 10px;
+}
+
+.footer-icon {
+    width: 50px;              /* same size for all */
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.footer-icon:hover {
+    transform: scale(1.1);    /* hover effect */
+}
+
+/* Responsive: shrink icons on small screens */
+@media (max-width: 480px) {
+    .footer-icon {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+.footer div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* space between icons */
+    margin-top: 10px;
+}
+
+/* ---- NAVBAR ---- */
+.navbar ul{
+    list-style-type: none;
+    background-color: #7da6d2;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+}
+
+.navbar a{
+    color:cornsilk;
+    text-decoration: none;
+    padding: 15px;
+    display:block;
+    text-align: right;
+    font-size: large;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar a:hover {
+    background-color: rgb(77, 116, 157);
+}
+
+.navbar-logo{ float: left; }
+.navbar-link{ float: right; }
+
+/* ---- BUTTONS ---- */
+.button {
+    background-color: rgb(5, 54, 101);
+    border: none;
+    color: cornsilk;
+    padding: 8px 20px;
+    text-align: center;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 2px;
+}
+
+.button:hover {
+    background-color: rgb(77, 116, 157); 
+    color: rgb(52, 52, 52);
+}
+
+.button-row {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 16px;
+}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {
+    .intro-table td {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+    .profile-img { width: 120px; border: 3px solid rgb(125,166,210); }
+}
